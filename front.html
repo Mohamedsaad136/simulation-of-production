@@ -30,15 +30,14 @@
         <a class="button" href="#contact">Start a project <span aria-hidden="true">&rarr;</span></a>
       </div>
 
-      <div class="hero-art" aria-label="Industrial machinery illustration">
-        <div class="machine">
-          <div class="machine-window"></div>
-          <div class="machine-side"></div>
-          <div class="machine-track">
-            <span></span><span></span><span></span><span></span><span></span>
-          </div>
-        </div>
-        <div class="floor-line"></div>
+      <div class="hero-art" aria-label="Industrial production line">
+        <img
+          src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1200&q=85&auto=format&fit=crop"
+          alt="Industrial production line machinery"
+          class="hero-photo"
+          loading="eager"
+        >
+        <div class="hero-photo-overlay"></div>
       </div>
     </section>
 
@@ -53,14 +52,9 @@
       <div class="shop-grid">
 
         <div class="shop-card" data-id="1" data-name="Precision Gear Set" data-price="149">
-          <div class="card-art card-art--gears">
-            <svg viewBox="0 0 80 80" fill="none" aria-hidden="true">
-              <circle cx="30" cy="30" r="14" stroke="#ff5a1f" stroke-width="6"/>
-              <circle cx="30" cy="30" r="6"  fill="#ff5a1f"/>
-              <circle cx="56" cy="52" r="10" stroke="#17201e" stroke-width="5"/>
-              <circle cx="56" cy="52" r="4"  fill="#17201e"/>
-              <line x1="38" y1="36" x2="48" y2="44" stroke="#b4bbb6" stroke-width="3"/>
-            </svg>
+          <div class="card-art">
+            <img src="https://images.unsplash.com/photo-1565688534245-05d6b5be184a?w=600&q=80&auto=format&fit=crop"
+                 alt="Precision steel gear set" loading="lazy">
           </div>
           <div class="card-body">
             <span class="card-tag">Mechanical</span>
@@ -74,16 +68,9 @@
         </div>
 
         <div class="shop-card" data-id="2" data-name="Industrial Control Board" data-price="299">
-          <div class="card-art card-art--board">
-            <svg viewBox="0 0 80 80" fill="none" aria-hidden="true">
-              <rect x="10" y="20" width="60" height="40" rx="3" stroke="#ff5a1f" stroke-width="5" fill="#17201e"/>
-              <rect x="20" y="30" width="12" height="8"  fill="#ff5a1f" rx="1"/>
-              <rect x="38" y="30" width="6"  height="6"  fill="#b4bbb6" rx="1"/>
-              <rect x="50" y="28" width="8"  height="12" fill="#b4bbb6" rx="1"/>
-              <line x1="20" y1="52" x2="20" y2="60" stroke="#b4bbb6" stroke-width="3"/>
-              <line x1="40" y1="52" x2="40" y2="60" stroke="#b4bbb6" stroke-width="3"/>
-              <line x1="60" y1="52" x2="60" y2="60" stroke="#b4bbb6" stroke-width="3"/>
-            </svg>
+          <div class="card-art">
+            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=80&auto=format&fit=crop"
+                 alt="Industrial circuit control board" loading="lazy">
           </div>
           <div class="card-body">
             <span class="card-tag">Electronics</span>
@@ -98,14 +85,9 @@
 
         <div class="shop-card featured" data-id="3" data-name="Full Production Kit" data-price="899">
           <span class="badge">Best Value</span>
-          <div class="card-art card-art--kit">
-            <svg viewBox="0 0 80 80" fill="none" aria-hidden="true">
-              <rect x="8"  y="30" width="30" height="36" rx="2" fill="#ff5a1f"/>
-              <rect x="42" y="18" width="30" height="48" rx="2" fill="#17201e"/>
-              <rect x="14" y="38" width="18" height="12" rx="1" fill="white" opacity="0.25"/>
-              <rect x="48" y="26" width="18" height="12" rx="1" fill="white" opacity="0.25"/>
-              <rect x="48" y="44" width="18" height="12" rx="1" fill="#ff5a1f" opacity="0.7"/>
-            </svg>
+          <div class="card-art">
+            <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&q=80&auto=format&fit=crop"
+                 alt="Full industrial production kit" loading="lazy">
           </div>
           <div class="card-body">
             <span class="card-tag">Bundle</span>
@@ -119,16 +101,9 @@
         </div>
 
         <div class="shop-card" data-id="4" data-name="HD Sensor Pack" data-price="79">
-          <div class="card-art card-art--sensor">
-            <svg viewBox="0 0 80 80" fill="none" aria-hidden="true">
-              <circle cx="40" cy="40" r="22" stroke="#b4bbb6" stroke-width="5"/>
-              <circle cx="40" cy="40" r="10" stroke="#ff5a1f" stroke-width="5"/>
-              <circle cx="40" cy="40" r="3"  fill="#ff5a1f"/>
-              <line x1="40" y1="10" x2="40" y2="18" stroke="#b4bbb6" stroke-width="3"/>
-              <line x1="40" y1="62" x2="40" y2="70" stroke="#b4bbb6" stroke-width="3"/>
-              <line x1="10" y1="40" x2="18" y2="40" stroke="#b4bbb6" stroke-width="3"/>
-              <line x1="62" y1="40" x2="70" y2="40" stroke="#b4bbb6" stroke-width="3"/>
-            </svg>
+          <div class="card-art">
+            <img src="https://images.unsplash.com/photo-1563770660941-20978e870e26?w=600&q=80&auto=format&fit=crop"
+                 alt="HD industrial sensor pack" loading="lazy">
           </div>
           <div class="card-body">
             <span class="card-tag">Sensors</span>
@@ -189,6 +164,7 @@
     <p>Ready to build something reliable?</p>
     <a href="mailto:hello@proline.example">hello@proline.example</a>
   </footer>
+  <script src="anim.js"></script>
   <script src="shop.js"></script>
 </body>
 </html>
