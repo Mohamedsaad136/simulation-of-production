@@ -4,8 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ProLine</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2307111f'/%3E%3Crect x='20' y='20' width='24' height='24' rx='4' fill='none' stroke='%23ff6b35' stroke-width='7' transform='rotate(45 32 32)'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
   <link rel="stylesheet" href="front.css">
   <link rel="stylesheet" href="shop.css">
+  <link rel="stylesheet" href="gallery.css">
 </head>
 <body>
   <header class="site-header">
@@ -48,6 +52,7 @@
       </div>
       <a href="#process" class="nav-link">Process</a>
       <a href="#shop"    class="nav-link">Shop</a>
+      <a href="#gallery" class="nav-link">Gallery</a>
       <a href="#contact" class="nav-link">Contact</a>
     </nav>
   </header>
@@ -189,13 +194,231 @@
         <p>Strict checks across the full production process.</p>
       </article>
     </section>
+
+    <!-- ── GALLERY / MOTION SHOWCASE ── -->
+    <section class="gallery-section" id="gallery">
+      <div class="gallery-header">
+        <p class="eyebrow" data-aos="fade-down" data-aos-delay="100">Visual showcase</p>
+        <h2 class="gallery-heading" data-aos="fade-up" data-aos-delay="200">Our Work, In Motion.</h2>
+        <p class="gallery-sub" data-aos="fade-up" data-aos-delay="300">
+          Precision manufacturing captured — from raw metal to finished product.
+        </p>
+      </div>
+
+      <div class="main-slider-section">
+        <div class="swiper mainSwiper">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="slide-bg" style="background-image:url('https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1600&q=85&auto=format&fit=crop')"></div>
+              <div class="slide-overlay"></div>
+              <div class="slide-content">
+                <span class="slide-num">01</span>
+                <h3 class="slide-title">Assembly Line</h3>
+                <p class="slide-desc">High-throughput assembly systems designed for zero-defect output at industrial scale. Our conveyors handle up to 2,400 units per hour.</p>
+                <a href="#contact" class="slide-cta">Enquire →</a>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="slide-bg" style="background-image:url('https://images.unsplash.com/photo-1565688534245-05d6b5be184a?w=1600&q=85&auto=format&fit=crop')"></div>
+              <div class="slide-overlay"></div>
+              <div class="slide-content">
+                <span class="slide-num">02</span>
+                <h3 class="slide-title">Precision Gears</h3>
+                <p class="slide-desc">Hardened-steel transmission components machined to tolerances of ±0.002 mm. Gear pairs tested under full load before shipment.</p>
+                <a href="#shop" class="slide-cta">Shop Gears →</a>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="slide-bg" style="background-image:url('https://images.unsplash.com/photo-1518770660439-4636190af475?w=1600&q=85&auto=format&fit=crop')"></div>
+              <div class="slide-overlay"></div>
+              <div class="slide-content">
+                <span class="slide-num">03</span>
+                <h3 class="slide-title">Control Electronics</h3>
+                <p class="slide-desc">Industrial-grade PCB design and assembly for factory automation, from single-board microcontrollers to full DIN-rail panels.</p>
+                <a href="#shop" class="slide-cta">Shop Boards →</a>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="slide-bg" style="background-image:url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1600&q=85&auto=format&fit=crop')"></div>
+              <div class="slide-overlay"></div>
+              <div class="slide-content">
+                <span class="slide-num">04</span>
+                <h3 class="slide-title">Expert Workforce</h3>
+                <p class="slide-desc">Every production run is overseen by certified engineers with 10+ years of lean manufacturing experience.</p>
+                <a href="#contact" class="slide-cta">Work with us →</a>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="slide-bg" style="background-image:url('https://images.unsplash.com/photo-1562408590-e32931084e23?w=1600&q=85&auto=format&fit=crop')"></div>
+              <div class="slide-overlay"></div>
+              <div class="slide-content">
+                <span class="slide-num">05</span>
+                <h3 class="slide-title">CNC Machining</h3>
+                <p class="slide-desc">5-axis CNC centres running 24/7 for complex geometries in aluminium, titanium, and stainless steel. Any quantity, any complexity.</p>
+                <a href="#contact" class="slide-cta">Get a quote →</a>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="slide-bg" style="background-image:url('https://images.unsplash.com/photo-1587293852726-70cdb56c2866?w=1600&q=85&auto=format&fit=crop')"></div>
+              <div class="slide-overlay"></div>
+              <div class="slide-content">
+                <span class="slide-num">06</span>
+                <h3 class="slide-title">Robotic Automation</h3>
+                <p class="slide-desc">Collaborative robot arms integrated into existing production lines — increasing throughput by up to 340% with no downtime during switchover.</p>
+                <a href="#contact" class="slide-cta">Learn more →</a>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+        <div class="slide-counter">
+          <span id="currentSlide">01</span>
+          <span class="counter-sep">/</span>
+          <span id="totalSlides">06</span>
+        </div>
+      </div>
+
+      <div class="thumb-section" data-aos="fade-up" data-aos-delay="100">
+        <div class="swiper thumbSwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide thumb-slide">
+              <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=400&q=70&auto=format&fit=crop" alt="Assembly Line">
+              <span>Assembly Line</span>
+            </div>
+            <div class="swiper-slide thumb-slide">
+              <img src="https://images.unsplash.com/photo-1565688534245-05d6b5be184a?w=400&q=70&auto=format&fit=crop" alt="Precision Gears">
+              <span>Precision Gears</span>
+            </div>
+            <div class="swiper-slide thumb-slide">
+              <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&q=70&auto=format&fit=crop" alt="Control Electronics">
+              <span>Electronics</span>
+            </div>
+            <div class="swiper-slide thumb-slide">
+              <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&q=70&auto=format&fit=crop" alt="Expert Workforce">
+              <span>Workforce</span>
+            </div>
+            <div class="swiper-slide thumb-slide">
+              <img src="https://images.unsplash.com/photo-1562408590-e32931084e23?w=400&q=70&auto=format&fit=crop" alt="CNC Machining">
+              <span>CNC Machining</span>
+            </div>
+            <div class="swiper-slide thumb-slide">
+              <img src="https://images.unsplash.com/photo-1587293852726-70cdb56c2866?w=400&q=70&auto=format&fit=crop" alt="Robotics">
+              <span>Robotics</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="stats-banner">
+        <div class="stat" data-aos="fade-up" data-aos-delay="0">
+          <span class="stat-num">12+</span>
+          <span class="stat-label">Years in production</span>
+        </div>
+        <div class="stat" data-aos="fade-up" data-aos-delay="120">
+          <span class="stat-num">340</span>
+          <span class="stat-label">Projects completed</span>
+        </div>
+        <div class="stat" data-aos="fade-up" data-aos-delay="240">
+          <span class="stat-num">99.8%</span>
+          <span class="stat-label">On-time delivery rate</span>
+        </div>
+        <div class="stat" data-aos="fade-up" data-aos-delay="360">
+          <span class="stat-num">24/7</span>
+          <span class="stat-label">Production uptime</span>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer id="contact">
     <p>Ready to build something reliable?</p>
     <a href="mailto:hello@proline.example">hello@proline.example</a>
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
   <script src="anim.js"></script>
   <script src="shop.js"></script>
+  <script>
+    AOS.init({ once: true, duration: 750, easing: "ease-out-cubic" });
+
+    const thumbSwiper = new Swiper(".thumbSwiper", {
+      slidesPerView: 3,
+      spaceBetween: 12,
+      watchSlidesProgress: true,
+      breakpoints: {
+        600: { slidesPerView: 4 },
+        900: { slidesPerView: 6 },
+      },
+    });
+
+    const mainSwiper = new Swiper(".mainSwiper", {
+      loop: true,
+      speed: 900,
+      autoplay: {
+        delay: 5000,
+        pauseOnMouseEnter: true,
+        disableOnInteraction: false,
+      },
+      effect: "fade",
+      fadeEffect: { crossFade: true },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      thumbs: {
+        swiper: thumbSwiper,
+      },
+      keyboard: { enabled: true },
+      on: {
+        slideChange() {
+          const idx = this.realIndex;
+          document.getElementById("currentSlide").textContent =
+            String(idx + 1).padStart(2, "0");
+
+          const activeSlide = this.slides[this.activeIndex];
+          const targets = [
+            activeSlide.querySelector(".slide-num"),
+            activeSlide.querySelector(".slide-title"),
+            activeSlide.querySelector(".slide-desc"),
+            activeSlide.querySelector(".slide-cta"),
+          ];
+
+          gsap.fromTo(targets,
+            { opacity: 0, y: 30 },
+            { opacity: 1, y: 0, duration: 0.7, stagger: 0.12, ease: "power3.out", delay: 0.2 }
+          );
+        },
+        init() {
+          const firstSlide = this.slides[this.activeIndex];
+          gsap.fromTo(
+            [
+              firstSlide.querySelector(".slide-num"),
+              firstSlide.querySelector(".slide-title"),
+              firstSlide.querySelector(".slide-desc"),
+              firstSlide.querySelector(".slide-cta"),
+            ],
+            { opacity: 0, y: 40 },
+            { opacity: 1, y: 0, duration: 0.9, stagger: 0.14, ease: "power3.out", delay: 0.5 }
+          );
+        },
+      },
+    });
+  </script>
 </body>
 </html>
