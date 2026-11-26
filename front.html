@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ProLine</title>
   <link rel="stylesheet" href="front.css">
+  <link rel="stylesheet" href="shop.css">
 </head>
 <body>
   <header class="site-header">
@@ -15,6 +16,7 @@
     <nav class="nav" aria-label="Main navigation">
       <a href="#services">Services</a>
       <a href="#process">Process</a>
+      <a href="#shop">Shop</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
@@ -28,17 +30,116 @@
         <a class="button" href="#contact">Start a project <span aria-hidden="true">&rarr;</span></a>
       </div>
 
-      <div class="hero-art" aria-label="Industrial machinery illustration">
-        <div class="machine">
-          <div class="machine-window"></div>
-          <div class="machine-side"></div>
-          <div class="machine-track">
-            <span></span><span></span><span></span><span></span><span></span>
-          </div>
-        </div>
-        <div class="floor-line"></div>
+      <div class="hero-art" aria-label="Industrial production line">
+        <img
+          src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1200&q=85&auto=format&fit=crop"
+          alt="Industrial production line machinery"
+          class="hero-photo"
+          loading="eager"
+        >
+        <div class="hero-photo-overlay"></div>
       </div>
     </section>
+
+    <!-- ── SHOP / BUDGET SECTION ── -->
+    <section class="shop" id="shop">
+      <div class="shop-header">
+        <p class="eyebrow">Components &amp; Kits</p>
+        <h2 class="shop-title">Items for Sale</h2>
+        <p class="shop-sub">Pick what you need — add to cart, request a quote, ship.</p>
+      </div>
+
+      <div class="shop-grid">
+
+        <div class="shop-card" data-id="1" data-name="Precision Gear Set" data-price="149">
+          <div class="card-art">
+            <img src="https://images.unsplash.com/photo-1565688534245-05d6b5be184a?w=600&q=80&auto=format&fit=crop"
+                 alt="Precision steel gear set" loading="lazy">
+          </div>
+          <div class="card-body">
+            <span class="card-tag">Mechanical</span>
+            <h3>Precision Gear Set</h3>
+            <p>Hardened-steel spur gears, 12-tooth to 60-tooth, matched pair.</p>
+            <div class="card-footer">
+              <span class="price">$149<small>/set</small></span>
+              <button class="btn-add" data-id="1">Add to cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="shop-card" data-id="2" data-name="Industrial Control Board" data-price="299">
+          <div class="card-art">
+            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=80&auto=format&fit=crop"
+                 alt="Industrial circuit control board" loading="lazy">
+          </div>
+          <div class="card-body">
+            <span class="card-tag">Electronics</span>
+            <h3>Industrial Control Board</h3>
+            <p>Rugged 32-bit microcontroller board rated for factory-floor environments.</p>
+            <div class="card-footer">
+              <span class="price">$299<small>/unit</small></span>
+              <button class="btn-add" data-id="2">Add to cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="shop-card featured" data-id="3" data-name="Full Production Kit" data-price="899">
+          <span class="badge">Best Value</span>
+          <div class="card-art">
+            <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&q=80&auto=format&fit=crop"
+                 alt="Full industrial production kit" loading="lazy">
+          </div>
+          <div class="card-body">
+            <span class="card-tag">Bundle</span>
+            <h3>Full Production Kit</h3>
+            <p>Everything to start a line: gear set, control board, cabling, and sensor pack.</p>
+            <div class="card-footer">
+              <span class="price">$899<small>/kit</small></span>
+              <button class="btn-add" data-id="3">Add to cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="shop-card" data-id="4" data-name="HD Sensor Pack" data-price="79">
+          <div class="card-art">
+            <img src="https://images.unsplash.com/photo-1563770660941-20978e870e26?w=600&q=80&auto=format&fit=crop"
+                 alt="HD industrial sensor pack" loading="lazy">
+          </div>
+          <div class="card-body">
+            <span class="card-tag">Sensors</span>
+            <h3>HD Sensor Pack</h3>
+            <p>4× proximity sensors + 2× thermal probes for real-time line monitoring.</p>
+            <div class="card-footer">
+              <span class="price">$79<small>/pack</small></span>
+              <button class="btn-add" data-id="4">Add to cart</button>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /.shop-grid -->
+    </section>
+
+    <!-- ── CART DRAWER ── -->
+    <div class="cart-drawer" id="cartDrawer" aria-hidden="true">
+      <div class="cart-inner">
+        <div class="cart-top">
+          <span class="cart-title">Cart</span>
+          <button class="cart-close" id="cartClose" aria-label="Close cart">✕</button>
+        </div>
+        <ul class="cart-list" id="cartList"></ul>
+        <div class="cart-summary">
+          <span>Total</span>
+          <span id="cartTotal">$0</span>
+        </div>
+        <a href="#contact" class="button cart-cta" id="cartCta">Request a quote →</a>
+      </div>
+    </div>
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <!-- ── CART BUTTON (floating) ── -->
+    <button class="cart-fab" id="cartFab" aria-label="Open cart">
+      🛒 <span class="cart-count" id="cartCount">0</span>
+    </button>
 
     <section class="services" id="services">
       <article>
@@ -63,5 +164,7 @@
     <p>Ready to build something reliable?</p>
     <a href="mailto:hello@proline.example">hello@proline.example</a>
   </footer>
+  <script src="anim.js"></script>
+  <script src="shop.js"></script>
 </body>
 </html>
