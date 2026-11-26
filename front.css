@@ -90,13 +90,13 @@ body {
 
 /* ── HEADER ───────────────────────────────────── */
 .site-header {
-  height: 88px;
+  height: 100px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 6vw;
-  background: rgba(7, 17, 31, 0.85);
-  backdrop-filter: blur(14px);
+  background: rgba(7, 17, 31, 0.88);
+  backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--border);
   position: sticky;
   top: 0;
@@ -106,33 +106,159 @@ body {
 .brand {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   color: var(--text);
   font-family: "Oswald", sans-serif;
-  font-size: 22px;
-  letter-spacing: 2px;
+  font-size: 26px;
+  letter-spacing: 2.5px;
   text-decoration: none;
 }
 
 .brand-mark {
-  width: 19px;
-  height: 19px;
-  border: 5px solid var(--orange);
-  border-radius: 4px;
+  width: 22px;
+  height: 22px;
+  border: 6px solid var(--orange);
+  border-radius: 5px;
   transform: rotate(45deg);
 }
 
-.nav { display: flex; gap: 38px; }
-
-.nav a {
-  color: var(--muted);
-  font-size: 14px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: color 160ms;
+/* ── NAV ── */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 44px;
 }
 
-.nav a:hover { color: var(--orange); }
+.nav-link {
+  color: var(--muted);
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: 0.3px;
+  transition: color 160ms;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.nav-link:hover { color: var(--text); }
+
+.nav-chevron {
+  font-size: 11px;
+  opacity: 0.6;
+  transition: transform 220ms ease, opacity 220ms ease;
+}
+
+/* ── DROPDOWN ── */
+.nav-item {
+  position: relative;
+}
+
+.has-dropdown:hover .nav-chevron,
+.has-dropdown:focus-within .nav-chevron {
+  transform: rotate(180deg);
+  opacity: 1;
+}
+
+.has-dropdown:hover .nav-link,
+.has-dropdown:focus-within .nav-link {
+  color: var(--text);
+}
+
+.dropdown {
+  position: absolute;
+  top: calc(100% + 18px);
+  left: 50%;
+  transform: translateX(-50%) translateY(-8px);
+  min-width: 280px;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+  padding: 10px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 220ms ease, transform 220ms cubic-bezier(0.22,1,0.36,1);
+  z-index: 300;
+}
+
+/* small arrow pointing up */
+.dropdown::before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  width: 12px;
+  height: 12px;
+  background: var(--surface2);
+  border-left: 1px solid var(--border);
+  border-top: 1px solid var(--border);
+  border-radius: 2px 0 0 0;
+}
+
+.has-dropdown:hover .dropdown,
+.has-dropdown:focus-within .dropdown {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
+}
+
+.dropdown-link {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 14px;
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  color: var(--text);
+  transition: background 160ms;
+}
+
+.dropdown-link:hover { background: rgba(255,255,255,0.05); }
+
+.drop-icon {
+  font-size: 20px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--orange-dim);
+  border-radius: var(--radius-sm);
+  flex-shrink: 0;
+}
+
+.dropdown-link strong {
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.dropdown-link small {
+  display: block;
+  font-size: 12px;
+  color: var(--muted);
+  font-weight: 400;
+}
+
+.dropdown-cta {
+  margin-top: 6px;
+  padding: 10px 14px 4px;
+  border-top: 1px solid var(--border);
+}
+
+.dropdown-cta-link {
+  color: var(--orange);
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: 0.3px;
+  transition: opacity 160ms;
+}
+
+.dropdown-cta-link:hover { opacity: 0.8; }
 
 /* ── HERO ─────────────────────────────────────── */
 .hero {
@@ -207,6 +333,27 @@ h1 {
   background: #071527;
 }
 
+/* ── YOUTUBE BACKGROUND VIDEO ── */
+.yt-wrap {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.yt-iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100vw;
+  height: 56.25vw;    /* 16:9 of viewport width */
+  min-height: 100%;
+  min-width: 177.78%; /* 16:9 of panel height */
+  transform: translate(-50%, -50%);
+  border: 0;
+  pointer-events: none;
+}
+
 .hero-photo {
   position: absolute;
   inset: 0;
@@ -223,8 +370,8 @@ h1 {
   inset: 0;
   background: linear-gradient(
     to right,
-    rgba(7, 17, 31, 0.55) 0%,
-    rgba(7, 17, 31, 0.1) 60%,
+    rgba(7, 17, 31, 0.65) 0%,
+    rgba(7, 17, 31, 0.15) 55%,
     transparent 100%
   );
   pointer-events: none;
@@ -298,9 +445,10 @@ footer a:hover { text-decoration: underline; }
 
 /* ── RESPONSIVE ───────────────────────────────── */
 @media (max-width: 800px) {
-  .site-header { height: 72px; }
-  .nav { gap: 16px; }
-  .nav a:nth-child(2) { display: none; }
+  .site-header { height: 76px; }
+  .nav { gap: 18px; }
+  .nav-link { font-size: 14px; }
+  .dropdown { display: none; } /* hide dropdown on mobile for now */
 
   .hero { grid-template-columns: 1fr; }
   .hero-content { min-height: 500px; }

@@ -14,10 +14,41 @@
       <span>PROLINE</span>
     </a>
     <nav class="nav" aria-label="Main navigation">
-      <a href="#services">Services</a>
-      <a href="#process">Process</a>
-      <a href="#shop">Shop</a>
-      <a href="#contact">Contact</a>
+      <!-- Services with dropdown -->
+      <div class="nav-item has-dropdown">
+        <a href="#services" class="nav-link">
+          Services <span class="nav-chevron" aria-hidden="true">▾</span>
+        </a>
+        <div class="dropdown" role="menu">
+          <a href="#services" class="dropdown-link" role="menuitem">
+            <span class="drop-icon">⚙️</span>
+            <span>
+              <strong>Precision</strong>
+              <small>Exact parts to spec, every time</small>
+            </span>
+          </a>
+          <a href="#services" class="dropdown-link" role="menuitem">
+            <span class="drop-icon">⚡</span>
+            <span>
+              <strong>Speed</strong>
+              <small>Efficient workflows, fast delivery</small>
+            </span>
+          </a>
+          <a href="#services" class="dropdown-link" role="menuitem">
+            <span class="drop-icon">🔬</span>
+            <span>
+              <strong>Quality</strong>
+              <small>Strict checks across the full line</small>
+            </span>
+          </a>
+          <div class="dropdown-cta">
+            <a href="#contact" class="dropdown-cta-link">Get a custom quote →</a>
+          </div>
+        </div>
+      </div>
+      <a href="#process" class="nav-link">Process</a>
+      <a href="#shop"    class="nav-link">Shop</a>
+      <a href="#contact" class="nav-link">Contact</a>
     </nav>
   </header>
 
